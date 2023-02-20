@@ -7,7 +7,4 @@ After analysing the ERC20 contract, we can see that this is possible by approvin
 # Solution
 I will present the solution in 2 ways:
 1. If it was a real contract we could do this by entering in etherscan, calling approve function with the account that deployed the contract and then switch to second account (the approved one) and transfer the assets
-2. I made a small script/task in hardhat, and you can find it in 
-```
-script.ts
-```
+2. I made a small script/task in hardhat, and you can find it in `script.ts`
