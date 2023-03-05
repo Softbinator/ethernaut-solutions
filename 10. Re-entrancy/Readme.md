@@ -8,9 +8,7 @@ External calls can be dangerous, because we can create a looop in the transactio
 So we have to pass the initial condition, then on the external call we have to make sure to reenter in the contract. To pass the check, we will donate a small amount. After the donation we initiate our attack by calling the withdraw function.
 
 # Solution
-```
-Check ReentranceAttack.sol
-```
+Check `ReentranceAttack.sol`
 
 As we can see in `ReentranceAttack.sol` we declared the `fallback` function in order to reenter the victim contract when the external call is made. Be careful here, we want to withdraw funds while they are still there. Withdrawing with more than the balance will revert the transaction, so the attack will fail
 
