@@ -13,7 +13,7 @@ So, after reading the documentation, we can access the length of the array at sl
 Firstly, to call any function from the contract we have to call `make_contact`. After this, we cand use the **underflow** vulnerability in the `retract()` function and make the length of the array `0 - 1 = 2**256`. After this, using the `revise()` function, we can overide some slots. 
 
 For overriding **slot 0** we will use now the overflow vulnerability in slots.
-
+```
  --------------------------------------------------------------
  slot       -> values
  --------------------------------------------------------------
@@ -28,6 +28,7 @@ For overriding **slot 0** we will use now the overflow vulnerability in slots.
 | 2\*\*256    -> codex[2\*\*256 - 1 - keccak(1)]               |
 | 0           -> codex[2\*\*256 - 1 - keccak(1) + 1]           |
  --------------------------------------------------------------
+```
 
 After finding the index, we call `revise()` with the index that we found and our address.
 
