@@ -5,7 +5,7 @@ As we can see, there is no way to alter the owner in a direct way by us. But on 
 How actually the storage works?
 Firstly, we can say that the variable `_owner` is in slot 0, so somehow we need to access that slot and modify it. Now back to our dynamic array and hot does it work in storage. 
 
-Dynamic array storage layout can be found at: ()[https://docs.soliditylang.org/en/v0.8.17/internals/layout_in_storage.html#mappings-and-dynamic-arrays]
+Dynamic array storage layout can be found at: https://docs.soliditylang.org/en/v0.8.17/internals/layout_in_storage.html#mappings-and-dynamic-arrays
 
 So, after reading the documentation, we can access the length of the array at slot 1 and the first value is at slot `keccak(1)`. Another fact about storage is that it has 2**256-1 slots. And our array is dynamic(it can as long as we want)
 
