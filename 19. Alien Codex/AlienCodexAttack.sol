@@ -13,7 +13,7 @@ interface IAlienCodex{
   function revise(uint i, bytes32 _content) external; 
 }
 
-contract AlienHack {
+contract AlienCodexAttack {
 
     function attack(address target) external {
         IAlienCodex alienCodex = IAlienCodex(target);
