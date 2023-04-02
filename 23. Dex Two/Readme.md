@@ -8,14 +8,17 @@ To empty one pool we can use the steps on the first **dex** challenge, see `22. 
 
 After we drain a token (if you followed the steps that I did, `token1` balance is empty now in the contract), we can drain the second one.
 
-We deployed a new token, you can see the code at `SwappableTokenTwo.sol`. We added an external `mint` function to mint ourself (we could do that in constructor) and also to the **dex**!!!
+We deployed a new token, you can see the code at `SwappableTokenTwo.sol`. We added an external `mint` function to mint for ourself and also for the **dex**!!! We could mint for ourself from the constructor, but that will not apply for the dex
 
 So after the deploy, call the `mint` function:
 ```
 mint(<dex_address>, 1);
 ```
 
-We mint only one token to the dex, to make our job easier on the next calculation. Also, do not forget to mint to your address :) `mint(<my_address>, 1)`
+We mint only one token to the dex, to make our job easier on the next calculation. Also, do not forget to mint to your address :) 
+```
+mint(<my_address>, 1)
+```
 
 You will need to approve the contract to move the new funds:
 ```
